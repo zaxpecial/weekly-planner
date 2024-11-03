@@ -222,3 +222,16 @@ input, select{
     border-bottom: 1px solid #102f5e;
     margin-bottom: 1rem;
 }
+
+@media (max-width: 450px){
+    #months,
+    #days{
+        display: none;
+    }
+
+    #containers{
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
