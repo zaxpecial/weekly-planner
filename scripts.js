@@ -24,6 +24,11 @@ textarea.addEventListener("input", function() {
         textarea.value = textarea.value.slice(1); // Remove caractere inválido
     }
 
+    // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
+    if (textarea.value[0] === "3" && textarea.value.length > 1 && !/[01]/.test(textarea.value[1])) {
+        textarea.value = textarea.value.slice(0, 1); // Remove o segundo caractere inválido
+    }
+
     // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
     if (textarea.value.length > 2) {
         textarea.value = textarea.value.slice(0, 2);
@@ -251,6 +256,20 @@ loadTodos()
 
 
 // NOTE GRID
+
+// DAY FILL
+const dayFillTextarea = document.getElementById("day-fill")
+
+window.addEventListener("load", ()=>{
+    const daySavedText = localStorage.getItem("dayTextData")
+    if (daySavedText !== null){
+        dayFillTextarea.value = daySavedText;
+    }
+})
+
+dayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("dayTextData", dayFillTextarea.value)
+})
 
 // SEGUNDA
 const mondayTextarea = document.getElementById("monday-textarea")
