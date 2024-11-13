@@ -10,28 +10,154 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn")
 const searchInput = document.querySelector("#search-input")
 const eraseBtn = document.querySelector("#erase-button")
 const filterBtn = document.querySelector("#filter-select")
-const textarea = document.getElementById("day-fill");
+const textareaMonday = document.getElementById("monday-fill");
+const textareaTuesday = document.getElementById("tuesday-fill");
+const textareaWednesday = document.getElementById("wednesday-fill");
+const textareaThursday = document.getElementById("thursday-fill");
+const textareaFriday = document.getElementById("friday-fill");
+const textareaSaturday = document.getElementById("saturday-fill");
+const textareaSunday = document.getElementById("sunday-fill");
 
 let oldInputValue
 
 // Funções
-textarea.addEventListener("input", function() {
+textareaMonday.addEventListener("input", function() {
     // Permitir apenas números
-    textarea.value = textarea.value.replace(/[^0-9]/g, '');
+    textareaMonday.value = textareaMonday.value.replace(/[^0-9]/g, '');
 
     // Limitar o primeiro caractere a 0, 1, 2 ou 3
-    if (textarea.value.length > 0 && !/[0-3]/.test(textarea.value[0])) {
-        textarea.value = textarea.value.slice(1); // Remove caractere inválido
+    if (textareaMonday.value.length > 0 && !/[0-3]/.test(textareaMonday.value[0])) {
+        textareaMonday.value = textareaMonday.value.slice(1); // Remove caractere inválido
     }
 
     // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
-    if (textarea.value[0] === "3" && textarea.value.length > 1 && !/[01]/.test(textarea.value[1])) {
-        textarea.value = textarea.value.slice(0, 1); // Remove o segundo caractere inválido
+    if (textareaMonday.value[0] === "3" && textareaMonday.value.length > 1 && !/[01]/.test(textareaMonday.value[1])) {
+        textareaMonday.value = textareaMonday.value.slice(0, 1); // Remove o segundo caractere inválido
     }
 
     // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
-    if (textarea.value.length > 2) {
-        textarea.value = textarea.value.slice(0, 2);
+    if (textareaMonday.value.length > 2) {
+        textareaMonday.value = textareaMonday.value.slice(0, 2);
+    }
+});
+
+textareaTuesday.addEventListener("input", function() {
+    // Permitir apenas números
+    textareaTuesday.value = textareaTuesday.value.replace(/[^0-9]/g, '');
+
+    // Limitar o primeiro caractere a 0, 1, 2 ou 3
+    if (textareaTuesday.value.length > 0 && !/[0-3]/.test(textareaTuesday.value[0])) {
+        textareaTuesday.value = textareaTuesday.value.slice(1); // Remove caractere inválido
+    }
+
+    // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
+    if (textareaTuesday.value[0] === "3" && textareaTuesday.value.length > 1 && !/[01]/.test(textareaTuesday.value[1])) {
+        textareaTuesday.value = textareaTuesday.value.slice(0, 1); // Remove o segundo caractere inválido
+    }
+
+    // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
+    if (textareaTuesday.value.length > 2) {
+        textareaTuesday.value = textareaTuesday.value.slice(0, 2);
+    }
+});
+
+textareaWednesday.addEventListener("input", function() {
+    // Permitir apenas números
+    textareaWednesday.value = textareaWednesday.value.replace(/[^0-9]/g, '');
+
+    // Limitar o primeiro caractere a 0, 1, 2 ou 3
+    if (textareaWednesday.value.length > 0 && !/[0-3]/.test(textareaWednesday.value[0])) {
+        textareaWednesday.value = textareaWednesday.value.slice(1); // Remove caractere inválido
+    }
+
+    // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
+    if (textareaWednesday.value[0] === "3" && textareaWednesday.value.length > 1 && !/[01]/.test(textareaWednesday.value[1])) {
+        textareaWednesday.value = textareaWednesday.value.slice(0, 1); // Remove o segundo caractere inválido
+    }
+
+    // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
+    if (textareaWednesday.value.length > 2) {
+        textareaWednesday.value = textareaWednesday.value.slice(0, 2);
+    }
+});
+
+textareaThursday.addEventListener("input", function() {
+    // Permitir apenas números
+    textareaThursday.value = textareaThursday.value.replace(/[^0-9]/g, '');
+
+    // Limitar o primeiro caractere a 0, 1, 2 ou 3
+    if (textareaThursday.value.length > 0 && !/[0-3]/.test(textareaThursday.value[0])) {
+        textareaThursday.value = textareaThursday.value.slice(1); // Remove caractere inválido
+    }
+
+    // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
+    if (textareaThursday.value[0] === "3" && textareaThursday.value.length > 1 && !/[01]/.test(textareaThursday.value[1])) {
+        textareaThursday.value = textareaThursday.value.slice(0, 1); // Remove o segundo caractere inválido
+    }
+
+    // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
+    if (textareaThursday.value.length > 2) {
+        textareaThursday.value = textareaThursday.value.slice(0, 2);
+    }
+});
+
+textareaFriday.addEventListener("input", function() {
+    // Permitir apenas números
+    textareaFriday.value = textareaFriday.value.replace(/[^0-9]/g, '');
+
+    // Limitar o primeiro caractere a 0, 1, 2 ou 3
+    if (textareaFriday.value.length > 0 && !/[0-3]/.test(textareaFriday.value[0])) {
+        textareaFriday.value = textareaFriday.value.slice(1); // Remove caractere inválido
+    }
+
+    // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
+    if (textareaFriday.value[0] === "3" && textareaFriday.value.length > 1 && !/[01]/.test(textareaFriday.value[1])) {
+        textareaFriday.value = textareaFriday.value.slice(0, 1); // Remove o segundo caractere inválido
+    }
+
+    // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
+    if (textareaFriday.value.length > 2) {
+        textareaFriday.value = textareaFriday.value.slice(0, 2);
+    }
+});
+
+textareaSaturday.addEventListener("input", function() {
+    // Permitir apenas números
+    textareaSaturday.value = textareaSaturday.value.replace(/[^0-9]/g, '');
+
+    // Limitar o primeiro caractere a 0, 1, 2 ou 3
+    if (textareaSaturday.value.length > 0 && !/[0-3]/.test(textareaSaturday.value[0])) {
+        textareaSaturday.value = textareaSaturday.value.slice(1); // Remove caractere inválido
+    }
+
+    // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
+    if (textareaSaturday.value[0] === "3" && textareaSaturday.value.length > 1 && !/[01]/.test(textareaSaturday.value[1])) {
+        textareaSaturday.value = textareaSaturday.value.slice(0, 1); // Remove o segundo caractere inválido
+    }
+
+    // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
+    if (textareaSaturday.value.length > 2) {
+        textareaSaturday.value = textareaSaturday.value.slice(0, 2);
+    }
+});
+
+textareaSunday.addEventListener("input", function() {
+    // Permitir apenas números
+    textareaSunday.value = textareaSunday.value.replace(/[^0-9]/g, '');
+
+    // Limitar o primeiro caractere a 0, 1, 2 ou 3
+    if (textareaSunday.value.length > 0 && !/[0-3]/.test(textareaSunday.value[0])) {
+        textareaSunday.value = textareaSunday.value.slice(1); // Remove caractere inválido
+    }
+
+    // Se o primeiro caractere for "3", o segundo deve ser "0" ou "1"
+    if (textareaSunday.value[0] === "3" && textareaSunday.value.length > 1 && !/[01]/.test(textareaSunday.value[1])) {
+        textareaSunday.value = textareaSunday.value.slice(0, 1); // Remove o segundo caractere inválido
+    }
+
+    // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
+    if (textareaSunday.value.length > 2) {
+        textareaSunday.value = textareaSunday.value.slice(0, 2);
     }
 });
 
@@ -257,18 +383,102 @@ loadTodos()
 
 // NOTE GRID
 
-// DAY FILL
-const dayFillTextarea = document.getElementById("day-fill")
+// DAY FILL - SEGUNDA
+const mondayFillTextarea = document.getElementById("monday-fill")
 
 window.addEventListener("load", ()=>{
-    const daySavedText = localStorage.getItem("dayTextData")
-    if (daySavedText !== null){
-        dayFillTextarea.value = daySavedText;
+    const mondayFillSavedText = localStorage.getItem("mondayFillTextData")
+    if (mondayFillSavedText !== null){
+        mondayFillTextarea.value = mondayFillSavedText;
     }
 })
 
-dayFillTextarea.addEventListener("input", ()=>{
-    localStorage.setItem("dayTextData", dayFillTextarea.value)
+mondayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("mondayFillTextData", mondayFillTextarea.value)
+})
+
+// DAY FILL - TERÇA
+const tuesdayFillTextarea = document.getElementById("tuesday-fill")
+
+window.addEventListener("load", ()=>{
+    const tuesdayFillSavedText = localStorage.getItem("tuesdayFillTextData")
+    if (tuesdayFillSavedText !== null){
+        tuesdayFillTextarea.value = tuesdayFillSavedText;
+    }
+})
+
+tuesdayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("tuesdayFillTextData", tuesdayFillTextarea.value)
+})
+
+// DAY FILL - QUARTA
+const wednesdayFillTextarea = document.getElementById("wednesday-fill")
+
+window.addEventListener("load", ()=>{
+    const wednesdayFillSavedText = localStorage.getItem("wednesdayFillTextData")
+    if (wednesdayFillSavedText !== null){
+        wednesdayFillTextarea.value = wednesdayFillSavedText;
+    }
+})
+
+wednesdayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("wednesdayFillTextData", wednesdayFillTextarea.value)
+})
+
+// DAY FILL - QUINTA
+const thursdayFillTextarea = document.getElementById("thursday-fill")
+
+window.addEventListener("load", ()=>{
+    const thursdayFillSavedText = localStorage.getItem("thursdayFillTextData")
+    if (thursdayFillSavedText !== null){
+        thursdayFillTextarea.value = thursdayFillSavedText;
+    }
+})
+
+thursdayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("thursdayFillTextData", thursdayFillTextarea.value)
+})
+
+// DAY FILL - SEXTA
+const fridayFillTextarea = document.getElementById("friday-fill")
+
+window.addEventListener("load", ()=>{
+    const fridayFillSavedText = localStorage.getItem("fridayFillTextData")
+    if (fridayFillSavedText !== null){
+        fridayFillTextarea.value = fridayFillSavedText;
+    }
+})
+
+fridayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("fridayFillTextData", fridayFillTextarea.value)
+})
+
+// DAY FILL - SÁBADO
+const saturdayFillTextarea = document.getElementById("saturday-fill")
+
+window.addEventListener("load", ()=>{
+    const saturdayFillSavedText = localStorage.getItem("saturdayFillTextData")
+    if (saturdayFillSavedText !== null){
+        saturdayFillTextarea.value = saturdayFillSavedText;
+    }
+})
+
+saturdayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("saturdayFillTextData", saturdayFillTextarea.value)
+})
+
+// DAY FILL - DOMINGO
+const sundayFillTextarea = document.getElementById("sunday-fill")
+
+window.addEventListener("load", ()=>{
+    const sundayFillSavedText = localStorage.getItem("sundayFillTextData")
+    if (sundayFillSavedText !== null){
+        sundayFillTextarea.value = sundayFillSavedText;
+    }
+})
+
+sundayFillTextarea.addEventListener("input", ()=>{
+    localStorage.setItem("sundayFillTextData", sundayFillTextarea.value)
 })
 
 // SEGUNDA

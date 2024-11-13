@@ -216,7 +216,7 @@ input, select{
     padding: 5px;
 }
 
-#day-fill{
+#monday-fill{
     height: 50px;
     width: 40px;
     display: flex;
@@ -229,6 +229,83 @@ input, select{
     overflow: hidden;
 }
 
+#tuesday-fill{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#wednesday-fill{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#thursday-fill{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#friday-fill{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#saturday-fill{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#sunday-fill{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
 
 
 .notes-container header{
