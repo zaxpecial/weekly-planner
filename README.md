@@ -1,1 +1,1 @@
-# weekly-planner-2
+# weekly-planner
