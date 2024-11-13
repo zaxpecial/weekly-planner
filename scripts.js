@@ -10,10 +10,26 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn")
 const searchInput = document.querySelector("#search-input")
 const eraseBtn = document.querySelector("#erase-button")
 const filterBtn = document.querySelector("#filter-select")
+const textarea = document.getElementById("day-fill");
 
 let oldInputValue
 
 // Funções
+textarea.addEventListener("input", function() {
+    // Permitir apenas números
+    textarea.value = textarea.value.replace(/[^0-9]/g, '');
+
+    // Limitar o primeiro caractere a 0, 1, 2 ou 3
+    if (textarea.value.length > 0 && !/[0-3]/.test(textarea.value[0])) {
+        textarea.value = textarea.value.slice(1); // Remove caractere inválido
+    }
+
+    // Limitar a no máximo 2 caracteres (extra precaução ao `maxlength`)
+    if (textarea.value.length > 2) {
+        textarea.value = textarea.value.slice(0, 2);
+    }
+});
+
 const saveTodo = (text, done = 0, save = 1) =>{
     const todo = document.createElement("div")
     todo.classList.add("todo")
