@@ -216,6 +216,21 @@ input, select{
     padding: 5px;
 }
 
+#day-fill{
+    height: 50px;
+    width: 40px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
 .notes-container header{
     text-align: center;
     padding: 0 1rem 1rem;
