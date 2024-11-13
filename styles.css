@@ -75,9 +75,9 @@ input, select{
 .todo-container{
     max-width: 450px;
     margin: 3rem;
-    background-color: #b2daff;
+    background-color: #ffffff;
     padding: 1.5rem;
-    border-radius: 15px;
+    border: 1px solid #333
 }
 
 .todo-container header{
@@ -182,7 +182,7 @@ input, select{
 
 .notes-container{
     width: 1300px;
-    background-color: #b2daff;
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 15px;
 }
@@ -200,7 +200,7 @@ input, select{
     resize: none;
     padding: 7px;
     border: none;
-    border-bottom: 1px solid #333;
+    border: 1px solid #333;
     font-size: larger;
 }
 
@@ -233,5 +233,9 @@ input, select{
         width: 100%;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    body{
+        max-height: 100%;
     }
 }
