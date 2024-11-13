@@ -181,7 +181,7 @@ input, select{
 }
 
 .notes-container{
-    width: 1300px;
+    width: 100%;
     background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 15px;
